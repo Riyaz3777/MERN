@@ -14,10 +14,10 @@ router.post("/register", registerUser);
 // Login user
 router.post("/login", loginUser);
 
-// Get user profile (protected)
+// Get profile (protected)
 router.get("/profile", authMiddleware, getProfile);
 
-// Update password (frontend-only, no email/OTP)
+// Update password (frontend-only)
 router.put("/update-password", authMiddleware, updatePassword);
 
 module.exports = router;
